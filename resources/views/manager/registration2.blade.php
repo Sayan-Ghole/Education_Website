@@ -81,6 +81,53 @@
       align-items: center;
       margin-top: 0;
     }
+
+    /* paginationss.. */
+    .w-5.h-5 {
+    height: 20px;
+    width: 20px;
+    padding: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+    margin-left: 40px;
+}
+
+
+.w-5.h-5:hover {
+    background-color: #e2e6ea;
+}
+
+nav[role="navigation"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav[role="navigation"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+
+nav[role="navigation"] ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; 
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
   </style>
 </head>
 <body>
@@ -114,6 +161,7 @@
     </tr>
     @endforeach
   </table>
+  {{$reg->links()}}
 </div>
 </body>
 </html>

@@ -76,11 +76,9 @@ body {
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Lisan</div>
+    <div class="logo">realSkill</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/submit">Submit</a></li>
-      <li><a href="/register">Register</a></li>
     </ul>
   </nav>
 </body>

@@ -18,6 +18,8 @@ use App\Http\Controllers\user;
 use App\Http\Controllers\Users;
 use App\Models\User as ModelsUser;
 
+use App\Http\Middleware\gate;
+
 // //pest code
 // use Illuminate\Support\Facades\Storage;
 // use App\Models\UploadFileAdmin;
@@ -30,7 +32,7 @@ Route :: get('/',function(){
     return view("public.page");
 });
 
-Route ::get('/submit',[SubmitCourse::class,"index"]);
+Route ::get('/submit',[SubmitCourse::class,"index"])->middleware(gate::class);
 Route ::post('/submit',[SubmitCourse::class,"submit"]);
 
 Route ::get('/submit2',[SubmitCourse::class,"index"]);
@@ -86,11 +88,20 @@ Route::resource('topic', TopicAdminController::class);
 Route::resource('upload', UploadFileAdminController::class);
 
 
-Route::get('/user',[Users::class,"courseView"]);
+Route::get('/user',[Users::class,"courseView"])->middleware(gate::class);
 Route::get('/user/courses/{id}/topics', [Users::class, 'showTopics']);
 
-Route::get('/user/files',[Users::class,"showFiles"]);
+Route::get('/user/files',[Users::class,"showFiles"])->middleware(gate::class);
 Route::get('/user/download/{id}', [Users::class, 'downloadFile']);
+
+//search..
+Route::post('/search',[Users::class,"search"]);
+
+// middleware logout.............
+Route::get('/logout',function(){
+    session()->forget("user_id");
+    return redirect()->back();
+});
 
 
 

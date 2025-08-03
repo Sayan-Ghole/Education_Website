@@ -50,5 +50,9 @@ class Users extends Controller
         echo('File not found.');
     }
 }
+public function search(Request $req){
+        $courses =CourseAdmin::where('title','like',"%$req->search%")->get();
+        return view('public/course',compact("courses"));
+}
 
 }

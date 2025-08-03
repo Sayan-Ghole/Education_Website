@@ -1,5 +1,4 @@
-@extends("public.layouts.app")
-@section('main-section')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +6,19 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #ffffff;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .container {
       width: 450px;
-      margin: 50px auto;
       background-color: #ffffff;
-      border: 1px solid #cccccc;
       border-radius: 8px;
       padding: 30px;
       margin: 80px;
-      margin-left: 180px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h2 {
       text-align: center;
@@ -52,11 +52,16 @@
     input[type="submit"]:hover {
       background-color: #e65c00;
     }
+
+
+    
   </style>
 </head>
 <body>
+  
   <div class="container">
-    <h2>User Registration Form</h2>
+    
+    <h2>Sign Up</h2>
     <form action="{{url('/')}}/register" method="post">
         @csrf
       <label for="name">Name:</label>
@@ -74,10 +79,10 @@
       <label for="password_confirmation">Confirm Password:</label>
       <input type="password" id="password_confirmation" name="password_confirmation" required>
 
-      <input type="submit" value="Register">
+      <input type="submit" value="Sign Up">
     </form>
+    {{session()->put('user_id',1)}}
   </div>
 </body>
 </html>
 
-@endsection

@@ -232,66 +232,35 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Lisan</div>
+    <div class="logo">realSkill</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/user">Course</a></li>
       <li><a href="/user/files">Download File</a></li>
       <li><a href="/submit">Submit</a></li>
-      <li><a href="/register">Register</a></li>
+      <li><a href="/register">Sign Up</a></li>
+      <li><a href="/logout">Logout</a></li>
     </ul>
   </nav>
 
-  <!-- Carousel -->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://cdn.pixabay.com/photo/2024/12/28/01/27/ai-generated-9295105_1280.jpg" class="d-block w-100" alt="Slide 1">
-</div>
-      <!-- <div class="carousel-item">
-        <img src="https://plus.unsplash.com/premium_photo-1661663340820-970940a9ef2f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNvbXB1dGVyJTIwZ3JvdXBzLi58ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="Slide 3">
-      </div> -->
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  
+  <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    
+  </div> -->
     <!-- Main Two-Column Section -->
 <div class="main-section">
   <!-- Left: Registration Form -->
   <div class="left-container">
-    <h2 style="color: #FF6700;">User Registration Form</h2>
-    <form action="{{url('/')}}/register" method="post">
-      @csrf
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="number">Contact no:</label>
-      <input type="text" id="ph_no" name="ph_no" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <label for="password_confirmation">Confirm Password:</label>
-      <input type="password" id="password_confirmation" name="password_confirmation" required>
-
-      <input type="submit" value="Register">
-    </form>
+    <h2 style="color: #FF6700;"></h2>
+    
+    
   </div>
 
   <!-- Right: About Section -->
   <div class="right-container">
-    <h2 style="color:#FF6700;">Welcome to Lisan</h2>
+    <h2 style="color:#FF6700;">Welcome to realSkill</h2>
     <h4>
-      Lisan is your one-stop platform for accessing and submitting educational courses and files with ease.
+      realSkill is your one-stop platform for accessing and submitting educational courses and files with ease.
       Whether you're a learner or a contributor, our portal offers seamless access to valuable resources.
 </h4>
     <p>
@@ -304,11 +273,11 @@
 <div class="about-us">
   <h2>About Us</h2>
   
-    <h4>Welcome to Lisan, your trusted platform for learning, sharing, and growing.</h4> <br>
+    <h4>Welcome to realSkill, your trusted platform for learning, sharing, and growing.</h4> <br>
     <p>
 We believe education should be accessible, organized, and collaborative. That’s why we’ve built a space where students, educators, and professionals can come together to upload, download, and manage valuable learning resources with ease.
 <br>
-Whether you're submitting assignments, accessing course materials, or exploring new topics, Lisan is designed to support your educational journey—anytime, anywhere.
+Whether you're submitting assignments, accessing course materials, or exploring new topics, realSkill is designed to support your educational journey—anytime, anywhere.
 <br>
 Our mission is simple: <br>
 To make digital learning smarter, faster, and more connected. <br>
@@ -334,16 +303,16 @@ Thank you for being a part of our growing community.
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Follow Us</h3>
+        <!-- <h3>Follow Us</h3>
         <p>
           <a href="#">Facebook</a> |
           <a href="#">Twitter</a> |
           <a href="#">Instagram</a>
-        </p>
+        </p> -->
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy;Lisan.</p>
+      <p>&copy;realSkill.</p>
     </div>
   </footer>
 

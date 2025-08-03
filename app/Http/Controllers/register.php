@@ -22,11 +22,11 @@ class register extends Controller
             $registration->password =md5($req['password']);
             $registration->save();
 
-            return redirect('register/success');
+            return redirect('/');
 
         }
     public function view(){
-        $reg = Registration::all();
+        $reg = Registration::paginate(8);
         $data = compact('reg'); 
         return view('manager/registration2')->with($data);
     }

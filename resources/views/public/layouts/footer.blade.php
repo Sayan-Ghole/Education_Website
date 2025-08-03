@@ -60,19 +60,21 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="/">Home</a></li>
+        <li><a href="/submit">Submit</a></li>
+          <li><a href="/register">Register</a></li>
       </ul>
     </div>
     <div class="footer-section">
-      <h3>Follow Us</h3>
+      <!-- <h3>Follow Us</h3>
       <p>
         <a href="#">Facebook</a> |
         <a href="#">Twitter</a> |
         <a href="#">Instagram</a>
-      </p>
+      </p> -->
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; Lisan</p>
+    <p>&copy; realSkill</p>
   </div>
 </footer>
 
