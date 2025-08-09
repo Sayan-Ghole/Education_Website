@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Submit_course;
-use App\Models\Submit_topic;
-use App\Models\Upload_file;
+use App\Models\Course;
+use App\Models\Topic;
+use App\Models\File;
 
 class SubmitCourse extends Controller
 {
@@ -14,7 +14,7 @@ class SubmitCourse extends Controller
         }
 
         public function submit(Request $req){
-            $submit = new Submit_course;
+            $submit = new Course;
             
             $submit->id=$req['id'];
             $submit->course_title=$req['course_title'];
@@ -25,7 +25,7 @@ class SubmitCourse extends Controller
         }
 
         public function submit2(Request $re){
-            $submit2 = new Submit_topic;
+            $submit2 = new Topic;
 
             $submit2->course_id= $re['course_id'];
             $submit2->topic_title= $re['topic_title'];
@@ -37,7 +37,7 @@ class SubmitCourse extends Controller
         public function submit3(Request $r){
 
             
-            $submit3 = new Upload_file;
+            $submit3 = new File;
             
             $submit3->topic_id = $r['topic_id'];
             $submit3->file_title= $r['file_title'];

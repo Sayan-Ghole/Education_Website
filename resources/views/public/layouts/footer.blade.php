@@ -59,9 +59,9 @@
     <div class="footer-section">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/submit">Submit</a></li>
-          <li><a href="/register">Register</a></li>
+        <li><a href="{{route('Home_page')}}">Home</a></li>
+        <li><a href="{{route('Submit_page')}}">Submit</a></li>
+          <li><a href="{{route('register')}}">Register</a></li> 
       </ul>
     </div>
     <div class="footer-section">

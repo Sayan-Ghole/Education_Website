@@ -77,7 +77,7 @@
 
     <div class="sidebar">
         <h2 style="text-align:center;">Menu</h2>
-        <a href="{{ url('/') }}">Home</a>
+        <a href="{{route('Home_page')}}">Home</a>
         <a href="{{ url('/user') }}">All Courses</a>
         
     </div>

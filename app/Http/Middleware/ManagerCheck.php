@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class login2
+class ManagerCheck
 {
     /**
      * Handle an incoming request.
@@ -14,10 +14,13 @@ class login2
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {   
+    {
+        //  $managerCheck =session()->get('managerCheck');
+        $expected = auth()->guard('manager')->user()->userid;
         
-        // return $next($request);
+        if(!$expected){
+            return redirect('/login');
+        }
         return $next($request);
-        
     }
 }

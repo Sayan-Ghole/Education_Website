@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\CourseAdmin;
+use App\Models\Admin;
 use App\Models\TopicAdmin;
-use App\Models\UploadFileAdmin;
+use App\Models\AdminFile;
 use Illuminate\Support\Facades\Storage;
 
 class Users extends Controller
 {
     public function courseView(){
-        $courses = CourseAdmin::get();
+        $courses = Admin::get();
         return view('public/course',compact("courses"));
 
     }
@@ -19,7 +19,7 @@ class Users extends Controller
 
  public function showTopics($id)
     {
-        $courses = CourseAdmin::find($id);
+        $courses = Admin::find($id);
         $topics = TopicAdmin::where('course_id', $id)->get(); // get topics by course_id
 
         return view('public.topic', compact('courses', 'topics'));
@@ -27,7 +27,7 @@ class Users extends Controller
 
     public function showFiles(){
 
-        $file = UploadFileAdmin::get();
+        $file = AdminFile::get();
 
         return view('public/showFile',compact('file'));
     }
@@ -41,17 +41,19 @@ class Users extends Controller
     // }
 
     public function downloadFile($id){
-    $file = UploadFileAdmin ::findOrFail($id); 
+
+    $file = AdminFile ::findOrFail($id); 
     $path = $file->path; // Example: 'uploads/myfile.pdf'
 
     if (Storage::exists($path)) {
         return Storage::download($path);
-    } else {
+    } 
+    else {
         echo('File not found.');
     }
 }
 public function search(Request $req){
-        $courses =CourseAdmin::where('title','like',"%$req->search%")->get();
+        $courses =Admin::where('title','like',"%$req->search%")->get();
         return view('public/course',compact("courses"));
 }
 

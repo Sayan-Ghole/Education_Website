@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CourseAdmin;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class CourseAdminController extends Controller
@@ -12,7 +12,7 @@ class CourseAdminController extends Controller
      */
     public function index()
     {
-        $course = CourseAdmin::get();
+        $course = Admin::get();
         return view('admin/course/course_show',compact('course'));
 
     }
@@ -30,11 +30,15 @@ class CourseAdminController extends Controller
      */
     public function store(Request $request)
     {
-        // print_r($request->all());
-        $course = new CourseAdmin;
-        $course -> title= $request->courseName;
-        $course -> description	= $request->courseDescription	;
-        $course->save();
+        $request->validate([
+            'courseName' => 'required',
+            'courseDescription' => 'required',
+        ]);
+
+        Admin::create([
+            'title' => $request->courseName,
+            'description' => $request->courseDescription,
+        ]);
 
             return redirect()->back();
 
@@ -44,7 +48,7 @@ class CourseAdminController extends Controller
      * Display the specified resource.
      */
     public function show($id){
-    $courseAdmin = CourseAdmin::find($id);
+    $courseAdmin = Admin::find($id);
     return view('admin/course/show_data', compact('courseAdmin'));
     }
 
@@ -53,7 +57,7 @@ class CourseAdminController extends Controller
      */
     public function edit($id)
     {
-        $edit = CourseAdmin::find($id);
+        $edit = Admin::find($id);
 
         return view('admin/course/edit_data', compact('edit'));
 
@@ -65,7 +69,7 @@ class CourseAdminController extends Controller
      */
     public function update(Request $request,$id)
     {
-        $object = CourseAdmin::find($id);
+        $object = Admin::find($id);
 
         $object -> title= $request->courseName;
         $object -> description	= $request->courseDescription	;
@@ -79,7 +83,7 @@ class CourseAdminController extends Controller
      */
     public function destroy($id)
     {       
-        $object = CourseAdmin::find($id);
+        $object = Admin::find($id);
         $object->delete();
         return redirect()->back();
         }

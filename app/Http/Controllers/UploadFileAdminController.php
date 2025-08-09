@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UploadFileAdmin;
+use App\Models\AdminFile;
 use Illuminate\Http\Request;
 
 class UploadFileAdminController extends Controller
@@ -12,7 +12,7 @@ class UploadFileAdminController extends Controller
      */
     public function index()
     {
-         $upload = UploadFileAdmin::get();
+         $upload = AdminFile::get();
         return view('admin/upload/upload',compact('upload'));
     }
 
@@ -32,19 +32,33 @@ class UploadFileAdminController extends Controller
         $filePath = $request->file('path')->store('uploads');
 
         
-        $top = new UploadFileAdmin;
-        $top -> course_id= $request->courseId;
-        $top -> filename= $request->filename;
-         $top->path = $filePath;
+        // $top = new UploadFileAdmin;
+        // $top -> course_id= $request->courseId;
+        // $top -> filename= $request->filename;
+        // $top->path = $filePath;
 
-        $top->save();
+        // $top->save();
+
+        $request->validate([
+            'courseId'=>'required',
+            'filename'=>'required',
+            'path'=>'required',
+            
+        ]);
+        AdminFile::create([
+            "course_id"=> $request->courseId,
+            "filename"=>  $request->filename,
+            "path" => $filePath,
+
+        ]);
+
         return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(UploadFileAdmin $uploadFileAdmin)
+    public function show(AdminFile $uploadFileAdmin)
     {
         //
     }
@@ -54,7 +68,7 @@ class UploadFileAdminController extends Controller
      */
     public function edit($id)
     {
-        $edit = UploadFileAdmin::find($id);
+        $edit = AdminFile::find($id);
 
         return view('admin/upload/editFile', compact('edit'));
     }
@@ -64,9 +78,9 @@ class UploadFileAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $object = UploadFileAdmin::find($id);
+         $object = AdminFile::find($id);
 
-        $object -> course_id= $request->course_id;
+        $object -> course_id= $request->courseId;
         $object -> filename	= $request->filename;
         $object -> path	= $request->path;
         $object->update();
@@ -79,7 +93,7 @@ class UploadFileAdminController extends Controller
      */
     public function destroy($id)
     {
-         $object = UploadFileAdmin::find($id);
+         $object = AdminFile::find($id);
         $object->delete();
         return redirect()->back();
     }

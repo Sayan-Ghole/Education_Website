@@ -234,12 +234,12 @@
   <nav class="navbar">
     <div class="logo">realSkill</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
+      <li><a href="{{route('Home_page')}}">Home</a></li>
       <li><a href="/user">Course</a></li>
       <li><a href="/user/files">Download File</a></li>
-      <li><a href="/submit">Submit</a></li>
-      <li><a href="/register">Sign Up</a></li>
-      <li><a href="/logout">Logout</a></li>
+      <li><a href="{{route('Submit_page')}}">Submit</a></li>
+      <li><a href="{{route('register')}}">Sign Up</a></li>
+      <li><a href="{{route('user_logout')}}">Logout</a></li>
     </ul>
   </nav>
 

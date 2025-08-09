@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('upload_file_admins', function (Blueprint $table) {
+        Schema::create('admin__logins', function (Blueprint $table) {
             $table->id();
-            $table->string('course_id');
-            $table->string('filename');
-            $table->string('path');
+            $table->string('name');
+            $table->string('password');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('upload_file_admins');
+        Schema::dropIfExists('admin__logins');
     }
 };

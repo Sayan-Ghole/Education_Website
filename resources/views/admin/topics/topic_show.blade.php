@@ -100,7 +100,7 @@
         <h2>Topics</h2>
         <a href="{{ route('topic.create') }}"> Create Topic</a>
         <a href="{{ route('topic.index') }}"> View All Topics</a>
-        <a href="/admin">Home</a>
+        <a href="/admin_directly">Home</a>
     </div>
 
     <div class="content">

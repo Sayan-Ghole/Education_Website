@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Log_in;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\ManagerLogin;
 
 
-class login extends Controller
+class Login extends Controller
 {
     public function show3(){
         return view("manager/log_in");
@@ -20,46 +22,47 @@ class login extends Controller
         return view("admin/log_in_admin")->with($data);
     }
 
-    // public function show3_admin_update($id){
-    //     $manage = Log_in::find($id);
-    //     $data = compact('manage');
-    //     return view("admin/update")->with($data);
-    // }
+    
 
     public function login(Request $re){
-        $login = new Log_in;
-        $login->name =$re['name'];
-        $login->password =$re['password'];
-        $login->save();
-    
-        // return redirect("/manager");
+        
+       $re->validate([
+        'userid'=>'required',
+        'name' => 'required',
+        'password' => 'required'
+       ]);
+       $manager =ManagerLogin::create([
+        'userid'=> $re->userid,
+        'name' => $re->name,
+        'password' => Hash::make($re->password)
+       ]);
+        Auth::guard('manager')->login($manager);
+        
 
     if ($re->input('redirect_to') === 'admin') {
-        return redirect('/admin');
+        return redirect('/admin_directly');
     } 
     else {
-        return redirect('/manager');
+        return redirect('/manager_directly');
     }
-    
-    
     }
     
     public function show5(){
-        $login = Log_in::all();
+        $login = ManagerLogin::all();
         $data = compact('login');
 
         return view('admin/login_show')->with($data);
     }
 
     public function delete($id){
-        Log_in::find($id)->delete();
-        return redirect("/login2");
+        ManagerLogin::find($id)->delete();
+        return redirect()->route('admin_login_show');
     }
 
     public function edit($id){
-        $edit =Log_in::find($id);
+        $edit =ManagerLogin::find($id);
         if(is_null($edit)){
-           return redirect("/login2"); 
+           return redirect()->route('admin_login_show'); 
         }
         else{
             $url = ('/login2/submit').'/'.$id;
@@ -73,12 +76,30 @@ class login extends Controller
     }
 
     public function submit($id,  Request $re){
-        $submit =Log_in::find($id);
+        $submit =ManagerLogin::find($id);
         $submit->name =$re['name'];
-        $submit->password =$re['password'];
+        $submit->password = Hash::make($re['password']);
         $submit->save();
 
-        return redirect('/login2');
+        return redirect()->route('admin_login_show');
         
     }
+    public function login2_manager(){
+        return view("manager/login2_manager");
+    }
+
+    public function login2_manager_create(Request $request){
+        $request->validate([
+        'userid'=>'required',
+        'password' => 'required',
+            
+        ]);
+       if(Auth::guard('manager')->attempt(['userid'=> $request->userid,'password' =>$request->password])) {
+            return redirect('/manager_directly');
+       }
+       echo "not found..";
+
+        
+    }
+
 }

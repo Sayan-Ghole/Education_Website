@@ -53,15 +53,18 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <h2>Manager</h2>
-    <a href="/manager">Home</a>
-    <a href="/view2">Submissions</a>
-    <a href="/view">Registrations</a>
-    <a href="/login">Login</a>
+    
+    <a href="{{route('manager_page')}}">Home</a>
+    <a href="{{route('submissions')}}">Submissions</a>
+    <a href="{{route('registrations')}}">Registrations</a>
+    
+    <a href="{{route('manager_logout')}}">Logout</a>
   </div>
 
   <!-- Main content -->
   <div class="main-content">
-    <h1>Welcome to the Manager Dashboard</h1>
+    <h1>Hi, {{auth()->guard('manager')->user()->name}}</h1>
+    <h2>Welcome to the Manager Dashboard</h2>
       
     </section>
   </div>

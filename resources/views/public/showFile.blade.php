@@ -69,7 +69,7 @@
 <body>
     <div class="sidebar">
         <h2 style="text-align:center;">Menu</h2>
-        <a href="{{ url('/') }}">Home</a>
+        <a href="{{route('Home_page')}}">Home</a>
     </div>
     <div class="main-content">
     <h1> Download Files</h1>

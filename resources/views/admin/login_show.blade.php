@@ -121,14 +121,14 @@
   <div class="sidebar" >
     
     <h2>Admin</h2>
-    <a href="/admin">Home</a>
-    <a href="/admin_sub_view">Submissions</a>
-    
-    <a href="/login2">Managers</a>
+    <a href="{{route('admin_page')}}">Home</a>
+    <a href="{{route('all_submission')}}">Submissions</a>
+    <a href="{{route('admin_login_show')}}">Managers</a>
     <a href="/login_admin">Add Managers</a>
     <a href="/course">View All Courses</a>
     <a href="/topic">View All Topics</a>
     <a href="/upload">View All Files</a>
+    <a href="{{route('admin_logout')}}">Logout</a>
   </div>
 
    <div class="main-content">

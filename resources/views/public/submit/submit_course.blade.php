@@ -74,7 +74,7 @@
   <!-- Course Form -->
   <div class="form-container">
     <h2>Submit a Course</h2>
-    <form action="{{url('/')}}/submit" method="post">
+    <form action="{{route('Home_page')}}/submit" method="post">
         @csrf
       <label for="course-title">Course Title</label>
       <input type="text" id="course-title" name="course_title" required>
@@ -93,16 +93,16 @@
   <!-- Topic Form -->
   <div class="form-container">
     <h2>Submit a Topic</h2>
-    <form action="{{url('/')}}/submit2" method="post">
+    <form action="{{route('Home_page')}}/submit2" method="post">
         @csrf
       <label for="select-course">Select Course</label>
       <select id="select-course" name="course_id" required>
         <option > Choose a Course </option>
         <option value="1">C</option>
-        <option value="2">C++</option>
-        <option value="3">Java</option>
-        <option value="4">Python</option>
-        <option value="5">R Programming</option>
+        <option value="2">Java</option>
+        <option value="3">R Programming</option>
+        <option value="4">JavaScript</option>
+        <option value="5">PHP</option>
       </select>
       <label for="topic-title">Topic Title</label>
       <input type="text" id="topic-title" name="topic_title" required>
@@ -117,7 +117,7 @@
   <!-- File Form -->
   <div class="form-container">
     <h2>Upload a File</h2>
-    <form action="{{url('/')}}/submit3" method="post" enctype="multipart/form-data">
+    <form action="{{route('Home_page')}}/submit3" method="post" enctype="multipart/form-data">
         @csrf
         
       <label for="select-topic">Select Topic</label>

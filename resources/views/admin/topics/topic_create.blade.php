@@ -86,10 +86,10 @@
 @if($from === 'manager')
     <div class="sidebar" >
     <h2>Manager</h2>
-    <a href="/manager">Home</a>
-    <a href="/view2">Submissions</a>
-    <a href="/view">Registrations</a>
-    <a href="/login">Login</a>
+    <a href="{{route('manager_page')}}">Home</a>
+    <a href="{{route('submissions')}}">Submissions</a>
+    <a href="{{route('registrations')}}">Registrations</a>
+    <a href="{{route('manager_logout')}}">Logout</a>
   </div>
 
 @else
@@ -97,7 +97,7 @@
     <h2>All Topics</h2>
     <a href="{{ route('topic.create') }}">Create Topic</a>
     <a href="{{ route('topic.index') }}">View All Topic</a>
-    <a href="/admin">Home</a>
+    <a href="/admin_directly">Home</a>
   </div>
 
   @endif

@@ -134,10 +134,10 @@ nav[role="navigation"] ul {
      <!-- Sidebar -->
   <div class="sidebar" >
     <h2>Manager</h2>
-    <a href="/manager">Home</a>
-    <a href="/view2">Submissions</a>
-    <a href="/view">Registrations</a>
-    <a href="/login">Login</a>
+    <a href="{{route('manager_page')}}">Home</a>
+    <a href="{{route('submissions')}}">Submissions</a>
+    <a href="{{route('registrations')}}">Registrations</a>
+    <a href="{{route('manager_logout')}}">Logout</a>
   </div>
 
    <div class="main-content">

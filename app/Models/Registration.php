@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class registration extends Model
+class Registration extends Authenticatable
 {
+    
     protected $table = "registration";
-    protected $primaryKey = "ph_no";
+     protected $primaryKey = 'ph_no';
+    
+    protected $fillable = [
+        'name', 'email', 'password'
+    ];
 }

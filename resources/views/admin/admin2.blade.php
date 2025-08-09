@@ -46,6 +46,7 @@
     .main-content h1 {
       color: #333;
     }
+    
   </style>
 </head>
 <body>
@@ -53,19 +54,21 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <h2>Admin</h2>
-    <a href="/admin">Home</a>
-    <a href="/admin_sub_view">Submissions</a>
-    
-    <a href="/login2">Managers</a>
+    <a href="{{route('admin_page')}}">Home</a>
+    <a href="{{route('all_submission')}}">Submissions</a>
+    <a href="{{route('admin_login_show')}}">Managers</a>
     <a href="/login_admin">Add Managers</a>
     <a href="/course">View All Courses</a>
     <a href="/topic">View All Topics</a>
     <a href="/upload">View All Files</a>
+    <a href="{{route('admin_logout')}}">Logout</a>
   </div>
 
   <!-- Main content -->
   <div class="main-content">
-    <h1>Welcome to the Admin Dashboard</h1>
+    <h1>Hi, {{auth()->guard('admin')->user()->name}}</h1>
+    
+    <h2>Welcome to the Admin Dashboard</h2>
       
     </section>
   </div>

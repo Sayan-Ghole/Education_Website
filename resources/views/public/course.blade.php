@@ -115,13 +115,13 @@ label, input[type="text"], button {
 <body>
     <div class="sidebar">
         <h2 style="text-align:center;">Menu</h2>
-        <a href="{{ url('/') }}">Home</a>
+        <a href="{{route('Home_page')}}">Home</a>
         <a href="{{ url('/user') }}">All Courses</a>
     </div>
     <div class="main-content">
         <h1>Courses</h1>
         <div id="search_ber">
-        <form action="{{url('/search')}}" method="post">
+        <form action="{{route('search_course')}}" method="post">
             @csrf
             <label for="search">
                 Search Course:
@@ -135,7 +135,7 @@ label, input[type="text"], button {
         <div class="course">
             <h2>{{ $course->title }}</h2>
             <p>{{ $course->description }}</p>
-            <a href="{{ url('/user/courses/'.$course->id.'/topics') }}">View Topics</a>
+            <a href="{{ route('course_topics', ['id' => $course->id]) }}">View Topics</a>
 
         </div>
     @endforeach

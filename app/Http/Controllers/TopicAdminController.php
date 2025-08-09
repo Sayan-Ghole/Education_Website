@@ -30,12 +30,25 @@ class TopicAdminController extends Controller
     public function store(Request $request)
     {
         // print_r($request->all());
-        $top = new TopicAdmin;
-        $top -> course_id= $request->courseId;
-        $top -> title= $request->topicName;
-        $top -> description= $request->topicDescription;
+        // $top = new TopicAdmin;
+        // $top -> course_id= $request->courseId;
+        // $top -> title= $request->topicName;
+        // $top -> description= $request->topicDescription;
 
-        $top->save();
+        // $top->save();
+
+        $request->validate([
+            'courseId'=>'required',
+            'topicName'=>'required',
+            'topicDescription'=>'required',
+        ]);
+
+        TopicAdmin::create([
+            "course_id"=> $request->courseId,
+            "title"=> $request->topicName,
+            "description"=>  $request->topicDescription,
+
+        ]);
         return redirect()->back();
     }
 

@@ -56,7 +56,7 @@
   <div class="thankyou-box">
     <h1>Thank You!</h1>
     <br>
-    <a href="/">Go to Home</a>
+    <a href="{{route('Home_page')}}">Go to Home</a>
   </div>
 
 </body>

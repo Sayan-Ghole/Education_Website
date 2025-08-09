@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Registration</title>
+  <title>User Login</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,26 +61,17 @@
   
   <div class="container">
     
-    <h2>Sign Up</h2>
-    <form action="{{url('/')}}/register" method="post">
+    <h2>Login</h2>
+    <form action="{{url('/user_login_page')}}" method="post">
         @csrf
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
+     
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-
-      <label for="number">Contract no:</label>
-      <input type="text" id="ph_no" name="ph_no" required>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 
-      <label for="password_confirmation">Confirm Password:</label>
-      <input type="password" id="password_confirmation" name="password_confirmation" required>
-
-      <input type="submit" value="Sign Up">
-      <a href="user_login_page">Login</a>
+      <input type="submit" value="Login">
     </form>
     
   </div>

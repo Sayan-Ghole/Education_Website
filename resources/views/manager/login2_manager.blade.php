@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Manager Signu Up Page</title>
+  <title>Manager login Page</title>
   <style>
     body {
       margin: 0;
@@ -62,11 +62,10 @@
 <body>
 
   <div class="login-box">
-    <h2>Sign Up</h2>
-    <form action="{{url('/')}}/login" method="post">
+    <h2>Login</h2>
+    <form action="{{url('/login2_manager')}}" method="post">
       @csrf
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+      
 
       <label for="userid">User ID</label>
       <input type="text" id="userid" name="userid" required>
@@ -76,8 +75,7 @@
 
       
 
-      <input type="submit" value="Sign Up">
-      <a href="/login2_manager">Login</a>
+      <input type="submit" value="Login">
     </form>
   </div>
 

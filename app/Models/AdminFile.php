@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UploadFileAdmin extends Model
+class AdminFile extends Model
 {
+    protected $table = "upload_file_admins";
     protected $fillable = ['course_id', 'filename','path'];
 }

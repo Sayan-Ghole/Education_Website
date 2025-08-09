@@ -100,7 +100,7 @@
         <h2>Courses</h2>
         <a href="{{ route('course.create') }}"> Create Course</a>
         <a href="{{ route('course.index') }}"> View All Courses</a>
-        <a href="/admin">Home</a>
+        <a href="/admin_directly">Home</a>
     </div>
 
     <div class="content">

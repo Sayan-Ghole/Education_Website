@@ -4,9 +4,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class gate
+class AdminGate
 {
     /**
      * Handle an incoming request.
@@ -15,13 +16,17 @@ class gate
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user = session()->get('user_id');
+        $user = session()->get('userExist');
+        $user2 = session()->get('userExist2');
+       
+        $expected = config('custom.user_session_value');//1
 
-        if($user!=1){
-
+        if($user!=$expected && $user2!=$expected){
              return redirect("/register");
         
         }
+        
         return $next($request);
+        
     }
 }

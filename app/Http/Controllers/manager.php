@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class manager extends Controller
+class Manager extends Controller
 {
-    public function show(){
-        return view('manager/manager2');
+    public function show3(){
+        return view("manager/manager2");
     }
 }

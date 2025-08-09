@@ -78,7 +78,7 @@ body {
   <nav class="navbar">
     <div class="logo">realSkill</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
+      <li><a href="{{route('Home_page')}}">Home</a></li>
     </ul>
   </nav>
 </body>

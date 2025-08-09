@@ -118,7 +118,7 @@
         <h2>Files</h2>
         <a href="{{ route('upload.create') }}"> Upload File</a>
         <a href="{{ route('upload.index') }}"> View All Files</a>
-        <a href="/admin">Home</a>
+        <a href="/admin_directly">Home</a>
     </div>
 
     <div class="content">
