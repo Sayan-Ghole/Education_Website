@@ -1,6 +1,5 @@
 
-@extends("public.layouts.app")
-@section('main-section')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +49,7 @@
 
     button {
       width: 100%;
-      background-color: #FF6700;
+      background-color: #13033fff;
       color: white;
       padding: 10px;
       border: none;
@@ -60,7 +59,7 @@
     }
 
     button:hover {
-      background-color: #d85600ff;
+      background-color: #100234ff;
     }
     #format{
       display: flex;
@@ -97,12 +96,11 @@
         @csrf
       <label for="select-course">Select Course</label>
       <select id="select-course" name="course_id" required>
-        <option > Choose a Course </option>
-        <option value="1">C</option>
-        <option value="2">Java</option>
-        <option value="3">R Programming</option>
-        <option value="4">JavaScript</option>
-        <option value="5">PHP</option>
+        @foreach($courses as $course)
+        
+        <option value="{{$course->id}}">{{$course->title}}</option>
+
+        @endforeach
       </select>
       <label for="topic-title">Topic Title</label>
       <input type="text" id="topic-title" name="topic_title" required>
@@ -122,10 +120,11 @@
         
       <label for="select-topic">Select Topic</label>
       <select id="select-topic" name="topic_id" required>
-        <option value=""> Choose a Topic </option>
-        <option value="1">Topic X</option>
-        <option value="2">Topic Y</option>
-        <option value="3">Topic Z</option>
+
+      @foreach($topics as $topic)
+              <option value="{{$topic->course_id }}"> {{$topic->title}} </option>
+      @endforeach
+        
       </select>
 
       <label for="file-title">File Title</label>
@@ -142,4 +141,4 @@
  </div>
 </html>
 
-@endsection
+

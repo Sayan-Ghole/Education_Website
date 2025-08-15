@@ -16,30 +16,31 @@
     }
 
     .thankyou-box {
-      background-color: #fff;
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
       max-width: 400px;
       width: 100%;
     }
 
-    .thankyou-box h1 {
-      color: #28a745;
-      font-size: 32px;
-      margin-bottom: 10px;
+    /* Animation for the Thank You text */
+    @keyframes bounceFade {
+      0% { opacity: 0; transform: translateY(-50px); }
+      50% { opacity: 1; transform: translateY(0px); }
+      70% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
-    .thankyou-box p {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 30px;
+    .thankyou-box h1 {
+      color: #28a745;
+      font-size: 56px;
+      margin-bottom: 10px;
+      animation: bounceFade 1s ease-out forwards;
     }
 
     .thankyou-box a {
       text-decoration: none;
-      background-color: #FF6700;
+      background-color: #13033fff;
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
@@ -47,7 +48,7 @@
     }
 
     .thankyou-box a:hover {
-      background-color: #c95305ff;
+      background-color: #22066dff;
     }
   </style>
 </head>

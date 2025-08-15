@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Topic;
+use App\Models\Admin;
+use App\Models\TopicAdmin;
 use App\Models\File;
 
 class SubmitCourse extends Controller
 {
         public function index(){
-            return view("public.submit.submit_course");
+            $courses = Admin::get();
+            $topics = TopicAdmin::get();
+            return view("public.submit.submit_course",compact('courses','topics'));
         }
 
         public function submit(Request $req){

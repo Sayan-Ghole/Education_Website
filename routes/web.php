@@ -123,5 +123,9 @@ Route::get('/user_login_page',[Register::class,"user_login_page"])->name('user_l
 Route::post('/user_login_page',[Register::class,"user_login_page_create"])->name('user_login');
 
 
+//for submit option on topics.........
+
+Route::get('course-View-For-Submit',[Users::class,'courseViewForSubmit'])->name('course_options');
+
 
 

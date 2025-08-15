@@ -179,7 +179,7 @@
       <td>{{$submit_t->updated_at}}</td>
       <td>
         <a href="/admin_sub_approveT/{{$submit_t->course_id}}/{{$submit_t->topic_title}}/{{$submit_t->	topic_description}}"><button class="approve">Approve</button></a>
-      <a href="/admin_sub_delete2/{{$submit_t->course_id}}"><button class="reject">Reject</button></a>
+      <a href="/admin_sub_delete2/{{$submit_t->id}}"><button class="reject">Reject</button></a>
       </td>
     </tr>
     @endforeach   
@@ -206,7 +206,7 @@
       <td>
         <a href="/admin_sub_approveF/{{$up->topic_id}}/{{$up->file_title}}"><button class="approve">Approve</button></a>
       <br>
-      <a href="/admin_sub_delete3/{{$up->topic_id}}"><button class="reject">Reject</button></a>
+      <a href="/admin_sub_delete3/{{$up->id}}"><button class="reject">Reject</button></a>
       </td>
     </tr>
     @endforeach   

@@ -8,16 +8,14 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: white;
     }
 
     .login-box {
       width: 350px;
       margin: 100px auto;
       padding: 30px;
-      background-color: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
     h2 {

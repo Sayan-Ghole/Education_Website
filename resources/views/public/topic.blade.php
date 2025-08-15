@@ -13,7 +13,7 @@
 
         .sidebar {
             width: 200px;
-            background-color: #FF6700;
+            background-color: #13033fff;
             color: white;
             height: 100vh;
             padding-top: 20px;
@@ -28,7 +28,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #c34f02ff;
+            background-color: #230671ff;
         }
 
         .main-content {
@@ -39,7 +39,7 @@
 
         h1 {
             text-align: center;
-            color: #FF6700;
+            color: #13033fff;
         }
 
         .topic {
@@ -64,7 +64,7 @@
         a.back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #FF6700;
+            color: #13033fff;
             text-decoration: none;
         }
 

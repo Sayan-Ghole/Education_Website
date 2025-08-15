@@ -13,7 +13,7 @@
 
         .sidebar {
             width: 200px;
-            background-color: #FF6700;
+            background-color: #13033fff;
             color: white;
             height: 100vh;
             padding-top: 20px;
@@ -28,7 +28,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #ad4602ff;
+            background-color: #240675ff;
         }
 
         .main-content {
@@ -39,7 +39,7 @@
 
         h1 {
             text-align: center;
-            color: #FF6700;
+            color: #13033fff;
         }
 
         
@@ -55,14 +55,14 @@
              margin: 5px 0; 
             }
         .file a {
-             background: #FF6700; 
+             background: #13033fff; 
              color: #fff; 
              padding: 8px 12px; 
              text-decoration: none; 
              border-radius: 5px; 
             }
         .file a:hover {
-             background: #e05c00; 
+             background: #22066dff; 
             }
     </style>
 </head>

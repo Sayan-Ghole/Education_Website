@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class File extends Model
 {
     protected $table = "upload_file";
-    protected $primaryKey = "topic_id";
+    protected $primaryKey = "id";
 }

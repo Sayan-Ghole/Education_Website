@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Topic extends Model
 {
     protected $table = "submit_topic";
-    protected $primaryKey = "course_id";
+    protected $primaryKey = "id";
 }

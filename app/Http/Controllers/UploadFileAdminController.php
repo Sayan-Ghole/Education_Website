@@ -78,11 +78,12 @@ class UploadFileAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $object = AdminFile::find($id);
+        $filePath = $request->file('path')->store('uploads');
+        $object = AdminFile::find($id);
 
         $object -> course_id= $request->courseId;
         $object -> filename	= $request->filename;
-        $object -> path	= $request->path;
+        $object -> path	= $filePath;
         $object->update();
 
         return redirect()->back();

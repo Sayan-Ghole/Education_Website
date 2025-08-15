@@ -13,7 +13,7 @@
 
         .sidebar {
             width: 200px;
-            background-color: #FF6700;
+            background-color: #13033fff;
             color: white;
             height: 100vh;
             padding-top: 20px;
@@ -28,7 +28,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #ad4602ff;
+            background-color: #180352ff;
         }
 
         .main-content {
@@ -39,7 +39,7 @@
 
         h1 {
             text-align: center;
-            color: #FF6700;
+            color: #13033fff;
         }
 
         .course {
@@ -54,7 +54,7 @@
         .course a {
             display: inline-block;
             margin-top: 10px;
-            background-color: #FF6700;
+            background-color: #13033fff;
             color: white;
             padding: 8px 15px;
             text-decoration: none;
@@ -62,7 +62,7 @@
         }
 
         .course a:hover {
-            background-color: #e05c00;
+            background-color: #1c0755ff;
         }
 
         label {
@@ -82,13 +82,13 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-color: #ff6700;
-  box-shadow: 0 0 5px rgba(255, 103, 0, 0.4);
+  border-color: #13033fff;
+  box-shadow: 0 0 5px rgba(25, 3, 148, 0.4);
 }
 
 button {
   padding: 8px 16px;
-  background-color: #ff6700;
+  background-color: #13033fff;
   color: white;
   border: none;
   border-radius: 8px;
@@ -99,7 +99,7 @@ button {
 }
 
 button:hover {
-  background-color: #e65c00;
+  background-color: #270c71ff;
 }
 
 /* Optional: Group everything in one row */

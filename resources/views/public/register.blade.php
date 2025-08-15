@@ -42,7 +42,7 @@
       width: 100%;
       padding: 10px;
       margin-top: 25px;
-      background-color: #FF6700;
+      background-color: #13033fff;
       border: none;
       color: white;
       font-size: 16px;
@@ -50,7 +50,7 @@
       cursor: pointer;
     }
     input[type="submit"]:hover {
-      background-color: #e65c00;
+      background-color: #1f0569ff;
     }
 
 

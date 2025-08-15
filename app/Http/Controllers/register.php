@@ -97,6 +97,7 @@ class Register extends Controller
         $idc = Topic::find($id);
         $idc->delete();
         return redirect()->back();
+        // echo "$idc";
 
         
 

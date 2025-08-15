@@ -6,7 +6,7 @@
   <title>Home</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
   <style>
     * {
@@ -17,16 +17,20 @@
 
     body {
       font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+      background-color: #5fa8d3;
     }
 
     /* Navbar */
     .navbar {
-      background-color: #FF6700;
+      background-color: #5fa8d3;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      
+      padding: 28px 40px;
 
     }
 
@@ -47,9 +51,9 @@
       font-weight: 500;
     }
 
-    .nav-links li a:hover {
-      text-decoration: underline;
-    }
+    /* .nav-links li a:hover {
+      text-decoration: dashed;
+    } */
 
     .menu-toggle {
       display: none;
@@ -57,44 +61,13 @@
       cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #FF6700;
-        position: absolute;
-        top: 64px;
-        right: 20px;
-        padding: 15px;
-        border-radius: 8px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-    }
-
-    /* Carousel */
-    #carouselExampleAutoplaying {
-      max-width: 100%;
-      overflow: hidden;
-      margin-bottom: 40px;
-    }
-
-    .carousel-inner img {
-      height: 500px;
-      object-fit: cover;
-    }
+    
 
     /* Footer */
     .footer {
-      background-color: #333;
+      background-color: #13033fff;
       color: white;
+      /* color: #13033fff; */
       padding: 40px 20px 20px;
       font-size: 14px;
     }
@@ -111,7 +84,7 @@
     }
 
     .footer-section h3 {
-      color: #FF6700;
+      color: white;
       margin-bottom: 15px;
     }
 
@@ -127,7 +100,7 @@
     .footer-bottom {
       text-align: center;
       margin-top: 20px;
-      border-top: 1px solid #444;
+      border-top: 1px solid #100234ff;
       padding-top: 10px;
       color: #aaa;
     }
@@ -141,65 +114,115 @@
       margin-left: 128px;
       margin-top: 24px;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #cccccc;
-      border-radius: 5px;
-    }
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 25px;
-      background-color: #FF6700;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #e65c00;
-    }
+      
+    
     .main-section {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   max-width: 100%;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 2px auto;
+  padding: 60px;
   width: 100%;
 }
 
 .left-container{
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   border-radius: 8px;
   padding: 30px;
   flex: 1;
   margin-right: 40px;
+  margin-top: 54px;
   margin-left: 20px;
   
   
 }
 .right-container {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
+  /* background-color: #ffffff; */
+  padding: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
   flex: 1;
  
 }
+.about-container2 {
+  
+  padding: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+  font-size: 28px;
+  margin: 20px auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-right: 40px;
+  color: #15158bff;
+  font-weight: bold;
+  
+  flex: 1;
+ 
+}
+.about-container1 {
+  
+  padding: 60px;
+  width: 60%;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  max-width: 700px;         
+  margin: auto;
+  margin-top: 0;
+  flex: 1;
+ 
+}
+.about-container1 img {
+  width: 80%;           
+  height: 100%;      
+}
+.customar-task2{
+  padding: 80px;
+  height: 80%;
+  width: 60%;
+  margin: 20px;
+  margin-right: 0px;
+  /* background-color: red; */
+  border-radius: 12px;
+
+}
+.customar-task2 img{
+  width: 68%;  
+  height: 100%; 
+
+}
+.customar-task1{
+  padding: 80px;
+  /* height: 100%; */
+  
+  width: 80%;
+  margin: 20px;
+  margin-right: 10px;
+  /* background-color: red; */
+  border-radius: 12px;
+  
+
+}
+
+h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 68px;
+      animation: bounceFade 1s ease-out forwards;
+    }
+    h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 25px;
+    }
+h4 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
 
 .right-container {
   margin-left: 20px;
@@ -207,24 +230,124 @@
 
 .about-us {
   max-width: 100%;
-  margin: 60px auto;
-  background-color: #f4f4f4;
+  /* margin: 60px auto; */
+  margin-left: 0;
+  margin-top: 0;
+  /* background-color: white; */
   padding: 40px;
   width: 100%;
+  margin-right: 0;
+    padding-right: 0;
+    margin-left: 0;
+  padding-left: 0;
+  
+  /* display: flex; */
   margin-bottom: 0%;
 }
 
-.about-us h2 {
-  text-align: center;
-  color: #FF6700;
-  margin-bottom: 20px;
-}
+
 
 .about-us p {
   font-size: 16px;
   line-height: 1.7;
   color: #333;
 }
+.sec1{
+  display: flex;
+  background-color: white;
+  border-top-left-radius: 300px;
+  border-bottom-left-radius: 300px;
+  /* border-bottom-right-radius: 20px; */
+  margin: 40px 40px;
+  margin-top: 0;
+  margin: 20px;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: 180px;
+}
+.sec2{
+  display: flex;
+  background-color: white;
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+  margin: 40px 40px;
+  margin-top: 0;
+  margin: 20px;
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 180px;
+}
+
+
+@keyframes bounceFade {
+      0% { opacity: 0; transform: translateY(-50px); }
+      50% { opacity: 1; transform: translateY(0px); }
+      70% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+
+
+    .course-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #220769ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    
+    transition: background-color 0.3s ease;
+}
+
+.course-link:hover {
+    background-color: #100335ff;
+}
+
+
+.customar-task1 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #15158bff;
+
+  font-weight: bold;
+}
+.about-container2 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #15158bff;
+
+  font-weight: bold;
+}
+.course-link2 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #220769ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 10;
+    font-size: 16px;
+    /* font-weight: bold; */
+    transition: background-color 0.3s ease;
+}
+.course-link2:hover {
+    background-color: #100335ff;
+}
+.section-title{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #13033fff;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 60px;
+
+}
+
+
+
+/* edit.. */
+
 
   </style>
 </head>
@@ -232,9 +355,9 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">realSkill</div>
+    <div class="logo">Skill_Up</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="{{route('Home_page')}}">Home</a></li>
+      
       <li><a href="/user">Course</a></li>
       <li><a href="/user/files">Download File</a></li>
       <li><a href="{{route('Submit_page')}}">Submit</a></li>
@@ -244,47 +367,112 @@
   </nav>
 
   
-  <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    
-  </div> -->
+  
     <!-- Main Two-Column Section -->
 <div class="main-section">
   <!-- Left: Registration Form -->
   <div class="left-container">
-    <h2 style="color: #FF6700;"></h2>
+    
+  <h1 style="color: #04042cff;">Welcome to Skill_Up</h1>
     
     
   </div>
 
   <!-- Right: About Section -->
   <div class="right-container">
-    <h2 style="color:#FF6700;">Welcome to realSkill</h2>
-    <h4>
-      realSkill is your one-stop platform for accessing and submitting educational courses and files with ease.
+    
+    <h4 style="color: white;">
+      Skill_Up is your one-stop platform for accessing and submitting educational courses and files with ease.
       Whether you're a learner or a contributor, our portal offers seamless access to valuable resources.
-</h4>
-    <p>
+  </h4>
+    <p style="color: #13033fff;">
       Easily register, download, and submit your educational content from anywhere. We’re committed to enhancing knowledge-sharing and simplifying the digital education experience.
     </p>
   </div>
 </div>
 
 <!-- About Us Section -->
+ <div class="about-main" style="margin-right: 0;">
 <div class="about-us">
-  <h2>About Us</h2>
-  
-    <h4>Welcome to realSkill, your trusted platform for learning, sharing, and growing.</h4> <br>
-    <p>
-We believe education should be accessible, organized, and collaborative. That’s why we’ve built a space where students, educators, and professionals can come together to upload, download, and manage valuable learning resources with ease.
-<br>
-Whether you're submitting assignments, accessing course materials, or exploring new topics, realSkill is designed to support your educational journey—anytime, anywhere.
-<br>
-Our mission is simple: <br>
-To make digital learning smarter, faster, and more connected. <br>
 
-Thank you for being a part of our growing community.
+    <div class="sec1">
+        <div class="about-container1">
+            <img src="https://media.istockphoto.com/id/1389823038/vector/young-man-working-on-the-laptop-computer-and-having-a-idea-freelance-job-creativity.jpg?s=612x612&w=0&k=20&c=eAlHMALZxQG21xy8n5RNd-kXDIy9Gvz3d9AZJL8BPMc=" 
+                 alt="Man working on computer">
+        </div>
+        <div class="about-container2">
+            <h2 style="color: #13033fff;">Why Skill_Up</h2>
+            <ul>
+                <li>Help learners find quality educational resources quickly.</li>
+                <li>Empower contributors to share their own courses and topics effortlessly.</li>
+                <li>Simplify access with a clean, easy-to-use interface.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="section-title">What You Can Do on Skill_Up</h2>
+    
+    <div class="sec2">
+        <div class="customar-task1">
+          <h2 style="color: #13033fff;">Courses</h2>
+            <p>
+                Easily browse through different courses, explore detailed descriptions, 
+                and access related topics with downloadable resources. Whether you’re 
+                a student looking to enhance your skills or a contributor sharing your expertise,
+                our platform keeps everything simple and organized.
+            </p>
+            <a href="/user" class="course-link">Explore Courses</a>
+            
+        </div>
+        <div class="customar-task2">
+          <img src="https://cdn-icons-png.freepik.com/256/2721/2721593.png" alt="Courses Icon">
+            
+        </div>
+    </div>
+    <div class="sec1" style="margin-top: 48px;">
+        <div class="about-container1">
+            <img src="https://cdn.pixabay.com/photo/2017/03/08/21/20/pdf-2127829_640.png" 
+                 alt="Man working on computer">
+        </div>
+        <div class="about-container2">
+            <h2 style="color: #13033fff;">Download Files</h2>
+            <p>Here, you can find and download course materials, 
+              project files, reference documents, and other essential content in
+               just a few clicks. Files are neatly organized by course and category,
+                making it easy to locate exactly what you need.
+              </p>
+                <a href="/user/files" class="course-link2"> Explore Files</a>
+        </div>
+    </div>
+
+    <div class="sec2" style="margin-top: 48px;">
+        <div class="customar-task1">
+          <h2 style="color: #13033fff;">Submission</h2>
+            <p>
+              You can submit new courses, add detailed topics, 
+              and upload files that support your content. Whether you’re sharing 
+              study materials, practical guides, or multimedia resources, our 
+              platform makes the process simple and organized. Each submission is 
+              reviewed to ensure quality, helping us maintain a valuable and reliable 
+              knowledge base for all users.
+                   
+            </p>
+            <a href="{{route('Submit_page')}}" class="course-link">Submit New</a>
+            
+        </div>
+        <div class="customar-task2">
+          <img src="https://media.istockphoto.com/id/1257397992/vector/agreement-or-directory-submission-icon-design.jpg?s=612x612&w=0&k=20&c=31C-OFa78Gb5n5zSShQyaI3G64W6OfKwX_CKOmFBXWw=" alt="Courses Icon">
+            
+        </div>
+    </div>
+
+</div>
+<!-- Connect with a growing learning community. -->
   </p>
 </div>
+
+</div>
+
 
   <footer class="footer">
     <div class="footer-content">
@@ -312,7 +500,7 @@ Thank you for being a part of our growing community.
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy;realSkill.</p>
+      <p>&copy;Skill_Up.</p>
     </div>
   </footer>
 

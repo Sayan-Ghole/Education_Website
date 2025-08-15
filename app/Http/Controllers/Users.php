@@ -32,19 +32,14 @@ class Users extends Controller
         return view('public/showFile',compact('file'));
     }
 
-    // public function downloadFile($id){
-
-    //     $path = UploadFileAdmin::find($id);
-
-    //     return response()->download($path);
-       
-    // }
+    
 
     public function downloadFile($id){
 
     $file = AdminFile ::findOrFail($id); 
     $path = $file->path; // Example: 'uploads/myfile.pdf'
 
+    
     if (Storage::exists($path)) {
         return Storage::download($path);
     } 
