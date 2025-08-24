@@ -51,9 +51,9 @@
       font-weight: 500;
     }
 
-    /* .nav-links li a:hover {
-      text-decoration: dashed;
-    } */
+    .nav-links li a:hover {
+      color: #13033fff;
+    }
 
     .menu-toggle {
       display: none;
@@ -343,10 +343,27 @@ h4 {
   font-size: 60px;
 
 }
+.border{
+  border: 1px solid #13033fff;
 
+}
 
-
-/* edit.. */
+#green{
+    border: 2px solid white;  
+    padding: 4px 6px  
+}
+#green:hover{
+    border: 2px solid greenyellow;  
+    /* padding: 4px 6px   */
+}
+#red{
+    border: 2px solid white;  
+    padding: 4px 6px  
+}
+#red:hover{
+    border: 2px solid rgb(178, 31, 31);  
+    /* padding: 4px 6px   */
+}
 
 
   </style>
@@ -361,8 +378,15 @@ h4 {
       <li><a href="/user">Course</a></li>
       <li><a href="/user/files">Download File</a></li>
       <li><a href="{{route('Submit_page')}}">Submit</a></li>
-      <li><a href="{{route('register')}}">Sign Up</a></li>
-      <li><a href="{{route('user_logout')}}">Logout</a></li>
+      <li><a href="{{route('register')}}" >Sign Up</a></li>
+
+      @if(Auth::guard('register')->check())
+      <li><a href="{{route('user_logout')}}" id="red">Logout</a></li>
+      
+      @else
+      <li><a href="user_login_page" id="green">Login</a></li>
+
+      @endif
     </ul>
   </nav>
 

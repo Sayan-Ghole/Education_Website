@@ -19,9 +19,9 @@ class Register extends Controller
     public function register(Request $req){
             
             $req->validate([
-                'name' => 'required',
+                'name' => ['required','min:4'],
                 'email' => 'required|email',
-                'password' => 'required',
+                'password' => ['required','min:4'],
             ]);
            $register = Registration::create([
                 'name' => $req->name,
@@ -133,12 +133,13 @@ class Register extends Controller
         ]);
 
     }
-    public function approveF($id,$title,Request $request){
+    public function approveF($id,$title,$path,Request $request){
         // return redirect('course.create',compact('id','title','des'));
         $from = $request->query('from');
         return redirect()->route('upload.create', [
             'id' => $id,
             'title' => $title,
+            'path' => $path,
             'from' => $from
         ]);
 

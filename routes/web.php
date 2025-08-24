@@ -77,7 +77,7 @@ Route ::get('/admin_sub_delete3/{id}',[Register::class,"admin_sub_delete3"])->na
 
 Route::get('/admin_sub_approve/{id}/{title}/{des}',[Register::class,"approveC"])->name('approve_course');
 Route::get('/admin_sub_approveT/{id}/{title}/{des}',[Register::class,"approveT"])->name('approve_topics');
-Route::get('/admin_sub_approveF/{id}/{title}',[Register::class,"approveF"])->name('approve_files');
+Route::get('/admin_sub_approveF/{id}/{title}/{path}',[Register::class,"approveF"])->name('approve_files');
 
 
 // Route ::get("/registration",function(){

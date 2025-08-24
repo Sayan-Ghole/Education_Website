@@ -116,7 +116,7 @@
       <input type="text" name="filename" id="courseName" value="{{request('title')}}">
 
       <label for="">Upload file:</label>
-        <input type="file" name="path" id="file">
+        <input type="file" name="path" id="file" value="{{request('path')}}">
             <br>
       <button type="submit">Add</button>
     </form>

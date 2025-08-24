@@ -53,7 +53,11 @@
       background-color: #e65c00;
     }
 
+    .red-text{
+      color: red;
+      font-size: 4px ;
 
+    }
     
   </style>
 </head>
@@ -67,7 +71,11 @@
      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
-
+      <div class="red-text">
+      @error('email')
+        {{ $message }}
+      @enderror
+        </div>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
 

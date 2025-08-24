@@ -204,7 +204,7 @@
       <td>{{$up->created_at}}</td>
       <td>{{$up->updated_at}}</td>
       <td>
-        <a href="/admin_sub_approveF/{{$up->topic_id}}/{{$up->file_title}}"><button class="approve">Approve</button></a>
+        <a href="{{ route('approve_files', [$up->topic_id, $up->file_title, $up->uploaded_file]) }}"><button class="approve">Approve</button></a>
       <br>
       <a href="/admin_sub_delete3/{{$up->id}}"><button class="reject">Reject</button></a>
       </td>

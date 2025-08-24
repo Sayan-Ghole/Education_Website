@@ -53,7 +53,13 @@
       background-color: #1f0569ff;
     }
 
+.red-text{
+    margin-top: 4px;
+      color: red;
+      font-size: 14px ;
+      font-style: italic;
 
+    }
     
   </style>
 </head>
@@ -66,18 +72,42 @@
         @csrf
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
-
+        <div class="red-text">
+      @error('name')
+          {{ $message }}
+      @enderror
+          </div>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
+      <div class="red-text">
+      @error('email')
+          {{ $message }}
+      @enderror
+          </div>
 
       <label for="number">Contract no:</label>
       <input type="text" id="ph_no" name="ph_no" required>
+      <div class="red-text">
+      @error('ph_no')
+          {{ $message }}
+      @enderror
+          </div>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
+      <div class="red-text">
+      @error('password')
+          {{ $message }}
+      @enderror
+          </div>
 
       <label for="password_confirmation">Confirm Password:</label>
       <input type="password" id="password_confirmation" name="password_confirmation" required>
+      <div class="red-text">
+      @error('password_confirmation')
+          {{ $message }}
+      @enderror
+          </div>
 
       <input type="submit" value="Sign Up">
       <a href="user_login_page">Login</a>
