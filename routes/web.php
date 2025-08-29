@@ -22,6 +22,7 @@ use App\Http\Middleware\AdminGate;
 use App\Http\Middleware\ManagerCheck;
 
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\MailController;
 
 
 // //pest code
@@ -126,6 +127,9 @@ Route::post('/user_login_page',[Register::class,"user_login_page_create"])->name
 //for submit option on topics.........
 
 Route::get('course-View-For-Submit',[Users::class,'courseViewForSubmit'])->name('course_options');
+
+// for mail..................
+
 
 
 

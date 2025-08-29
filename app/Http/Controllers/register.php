@@ -8,6 +8,9 @@ use App\Models\Course;
 use App\Models\Topic;
 use App\Models\File;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MailController;
+use App\Mail\ConformationMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 
 class Register extends Controller
@@ -31,6 +34,8 @@ class Register extends Controller
 
         Auth::guard('register')->login($register);
         session()->put('userExist',1);
+
+        Mail::to($register->email)->send(new ConformationMail($register));
             return redirect('/');
 
         }
